@@ -1,0 +1,43 @@
+name: Check official recruitment pages
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install scanner dependency
+        run: pip install requests beautifulsoup4
+
+      - name: Scan configured official pages
+        run: python scripts/scan_sources.py
+
+      - name: Open or update admin-review pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore: refresh unverified recruitment candidates"
+          branch: automation/recruitment-candidates
+          delete-branch: true
+          title: "Review detected government recruitment notices"
+          body: |
+            Automated scan results are suggestions only.
+            Admin must verify every notice before publishing.
+          add-paths: |
+            data/candidates.json
+            data/scan-log.json
+            
