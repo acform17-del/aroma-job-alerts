@@ -1,0 +1,51 @@
+[
+  {
+    "id": "upsc",
+    "name": "UPSC Recruitment Advertisements",
+    "region": "All India",
+    "url": "https://upsc.gov.in/whats-new",
+    "official_domain": "upsc.gov.in"
+  },
+  {
+    "id": "ssc",
+    "name": "Staff Selection Commission",
+    "region": "All India",
+    "url": "https://ssc.gov.in/",
+    "official_domain": "ssc.gov.in"
+  },
+  {
+    "id": "rrb_chandigarh",
+    "name": "Railway Recruitment Board notices (sample regional board)",
+    "region": "All India",
+    "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+    "official_domain": "rrbcdg.gov.in"
+  },
+  {
+    "id": "ibps",
+    "name": "Institute of Banking Personnel Selection",
+    "region": "All India",
+    "url": "https://www.ibps.in/",
+    "official_domain": "ibps.in"
+  },
+  {
+    "id": "india_post",
+    "name": "India Post vacancies",
+    "region": "All India",
+    "url": "https://www.indiapost.gov.in/vacancies",
+    "official_domain": "indiapost.gov.in"
+  },
+  {
+    "id": "mpsc",
+    "name": "Maharashtra Public Service Commission",
+    "region": "Maharashtra",
+    "url": "https://mpsc.gov.in/adv_notification/8",
+    "official_domain": "mpsc.gov.in"
+  },
+  {
+    "id": "maha_police",
+    "name": "Maharashtra Police recruitment",
+    "region": "Maharashtra",
+    "url": "https://www.mahapolice.gov.in/police-recruitment",
+    "official_domain": "mahapolice.gov.in"
+  }
+]

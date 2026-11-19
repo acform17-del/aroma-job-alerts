@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find government and private job opportunities, recruitment notices and exam updates in one place.">
+  <meta name="theme-color" content="#172554">
+  <title>Job Alerts | Your Career Starts Here</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Job Alerts home">
+      <span class="brand-mark">✦</span>
+      <span><strong>JOB ALERTS</strong><small>Your Career Starts Here</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a>
+      <a href="#account">Login / Register</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="#contact">Contact us <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="pulse"></span> OPPORTUNITIES, ALL IN ONE PLACE</span>
+        <h1>Your next opportunity <span>starts here.</span></h1>
+        <p class="lead">Explore government and private job opportunities, recruitment notices and exam updates in one place.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#jobs">Explore opportunities <span>→</span></a>
+          <a class="button button-light" href="#account">Create an account</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✓</span> Built to help students and job seekers stay informed.</div>
+      </div>
+      <div class="hero-art" aria-label="Career illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-top"><span class="art-icon violet">▤</span><span><b>New opportunities</b><small>Stay informed</small></span></div>
+        <div class="person-illustration">
+          <div class="sun"></div><div class="laptop"></div><div class="person-head"></div>
+          <div class="person-body"></div><div class="person-arm"></div>
+        </div>
+        <div class="art-card art-card-bottom"><span class="art-icon yellow">✦</span><span><b>Build your future</b><small>One step at a time</small></span></div>
+        <span class="floating-star star-a">✦</span><span class="floating-star star-b">✧</span>
+      </div>
+    </section>
+
+    <section class="category-section section" id="services">
+      <div class="section-heading">
+        <div><span class="eyebrow">FIND WHAT YOU NEED</span><h2>Explore categories</h2></div>
+        <p>Choose a category to explore relevant updates.</p>
+      </div>
+      <div class="category-grid">
+        <a class="category-card cat-blue" href="#jobs" data-filter="Government"><span class="category-icon">🏛️</span><b>Government jobs</b><small>Recruitment and vacancy notices</small><span class="card-arrow">↗</span></a>
+        <a class="category-card cat-pink" href="#jobs" data-filter="Private"><span class="category-icon">🏢</span><b>Private jobs</b><small>Explore employment opportunities</small><span class="card-arrow">↗</span></a>
+        <a class="category-card cat-yellow" href="#jobs" data-filter="Exams"><span class="category-icon">📝</span><b>Exam updates</b><small>Exam-related announcements</small><span class="card-arrow">↗</span></a>
+        <a class="category-card cat-green" href="#jobs" data-filter="Admissions"><span class="category-icon">🎓</span><b>Admissions</b><small>Education and admission updates</small><span class="card-arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section class="jobs-section section" id="jobs">
+      <div class="section-heading">
+        <div><span class="eyebrow">KEEP YOUR SEARCH MOVING</span><h2>Latest updates</h2></div>
+        <p>Job posts will appear here when you add verified information.</p>
+      </div>
+      <div class="job-tools">
+        <label class="search-box"><span>⌕</span><input id="jobSearch" type="search" placeholder="Search job updates..." aria-label="Search job updates"></label>
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="All">All categories</option><option>Government</option><option>Private</option><option>Exams</option><option>Admissions</option>
+        </select>
+      </div>
+      <div id="jobList" class="job-list" aria-live="polite"></div>
+      <p class="data-note">Please verify every vacancy, deadline and eligibility detail on the official recruiting organisation's website before applying.</p>
+    </section>
+
+    <section class="about-section section" id="about">
+      <div class="about-visual"><div class="about-blob"><span>🎯</span><b>Stay<br>focused.</b><small>Your career journey matters.</small></div><span class="about-spark">✦</span></div>
+      <div class="about-copy"><span class="eyebrow">ABOUT JOB ALERTS</span><h2>Helping you find the information that moves you forward.</h2><p>Job Alerts is designed as a convenient place for students and job seekers to explore recruitment information, employment opportunities and exam-related updates.</p><p>Our goal is to make useful opportunity information easier to discover. Always confirm details with the official source before taking action.</p><a class="text-link" href="#contact">Get in touch <span>→</span></a></div>
+    </section>
+
+    <section class="account-section section" id="account">
+      <div class="account-copy"><span class="eyebrow">YOUR NEXT STEP</span><h2>Stay connected to new possibilities.</h2><p>Create an account or sign in to the platform when account services are enabled.</p></div>
+      <div class="account-panel">
+        <div class="tab-row"><button class="tab active" data-tab="register">Register</button><button class="tab" data-tab="login">Login</button></div>
+        <form id="accountForm">
+          <label>Full name<input name="name" id="accountName" placeholder="Enter your full name" autocomplete="name"></label>
+          <label>Email address<input name="email" type="email" placeholder="you@example.com" required autocomplete="email"></label>
+          <label>Password<input name="password" type="password" placeholder="Enter a password" required autocomplete="new-password"></label>
+          <button class="button button-primary full-width" type="submit" id="accountSubmit">Register</button>
+          <p class="form-message" id="accountMessage" role="status">Demo form only — connect a secure authentication service before accepting real accounts.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div><span class="eyebrow">WE'RE HERE TO HELP</span><h2>Have a question?</h2><p>Contact us on WhatsApp for enquiries. Add your official WhatsApp number in the site settings first.</p></div>
+      <a class="button button-whatsapp" id="whatsappLink" href="#" target="_blank" rel="noopener">☏ Contact on WhatsApp <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">✦</span><span><strong>JOB ALERTS</strong><small>Your Career Starts Here</small></span></a>
+    <p>Helping students and job seekers explore opportunities.</p>
+    <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    <small>© <span id="year"></span> Job Alerts. Please verify opportunities with official sources.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
