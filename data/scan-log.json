@@ -1,0 +1,51 @@
+[
+  {
+    "source": "UPSC Recruitment Advertisements",
+    "url": "https://upsc.gov.in/whats-new",
+    "checked_at": "2026-11-21T16:35:13.352666+00:00",
+    "status": "ok",
+    "candidate_links_found": 6
+  },
+  {
+    "source": "Staff Selection Commission",
+    "url": "https://ssc.gov.in/",
+    "checked_at": "2026-11-21T16:35:15.422465+00:00",
+    "status": "ok",
+    "candidate_links_found": 0
+  },
+  {
+    "source": "Railway Recruitment Board notices (sample regional board)",
+    "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+    "checked_at": "2026-11-21T16:35:16.605811+00:00",
+    "status": "error",
+    "error": "HTTPSConnectionPool(host='www.rrbcdg.gov.in', port=443): Max retries exceeded with url: /employment-notices.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbcdg.gov.in', port=443) at 0x795ca0a9d3a0>, 'Connection to www.rrbcdg.gov.in timed out. (connect timeout=25)'))"
+  },
+  {
+    "source": "Institute of Banking Personnel Selection",
+    "url": "https://www.ibps.in/",
+    "checked_at": "2026-11-21T16:35:42.372428+00:00",
+    "status": "error",
+    "error": "HTTPSConnectionPool(host='www.ibps.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)')))"
+  },
+  {
+    "source": "India Post vacancies",
+    "url": "https://www.indiapost.gov.in/vacancies",
+    "checked_at": "2026-11-21T16:35:43.133361+00:00",
+    "status": "ok",
+    "candidate_links_found": 5
+  },
+  {
+    "source": "Maharashtra Public Service Commission",
+    "url": "https://mpsc.gov.in/adv_notification/8",
+    "checked_at": "2026-11-21T16:35:44.330015+00:00",
+    "status": "ok",
+    "candidate_links_found": 0
+  },
+  {
+    "source": "Maharashtra Police recruitment",
+    "url": "https://www.mahapolice.gov.in/police-recruitment",
+    "checked_at": "2026-11-21T16:35:44.938723+00:00",
+    "status": "ok",
+    "candidate_links_found": 4
+  }
+]

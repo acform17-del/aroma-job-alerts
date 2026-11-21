@@ -1,1 +1,167 @@
-[]
+[
+  {
+    "id": "b4d5ce3e5595ee35",
+    "title": "Gazette Notifications Gazette Notifications",
+    "source": "India Post vacancies",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.indiapost.gov.in/documents/gazzettenotifications",
+    "source_page": "https://www.indiapost.gov.in/vacancies",
+    "detected_at": "2026-11-21T16:35:44.329868+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "a868aed13784e747",
+    "title": "Online GDS Recruitment",
+    "source": "India Post vacancies",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.indiapost.gov.in/vacancies/online-gds",
+    "source_page": "https://www.indiapost.gov.in/vacancies",
+    "detected_at": "2026-11-21T16:35:44.329971+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "51e99996ef2ff18d",
+    "title": "Recruitment Rules Recruitment Rules",
+    "source": "India Post vacancies",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.indiapost.gov.in/documents/recruitmentrules",
+    "source_page": "https://www.indiapost.gov.in/vacancies",
+    "detected_at": "2026-11-21T16:35:44.329902+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "496bd2b5da575d54",
+    "title": "Recruitments",
+    "source": "India Post vacancies",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.indiapost.gov.in/vacancies/recruitments",
+    "source_page": "https://www.indiapost.gov.in/vacancies",
+    "detected_at": "2026-11-21T16:35:44.329955+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "5eaa15ee3fff82dd",
+    "title": "Vacancies Vacancies",
+    "source": "India Post vacancies",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.indiapost.gov.in/vacancies",
+    "source_page": "https://www.indiapost.gov.in/vacancies",
+    "detected_at": "2026-11-21T16:35:44.329787+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "57f34db379daadd2",
+    "title": "Advertisements",
+    "source": "UPSC Recruitment Advertisements",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.upsc.gov.in/advertisements/",
+    "source_page": "https://upsc.gov.in/whats-new",
+    "detected_at": "2026-11-21T16:35:15.422189+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "14a0da259f41446a",
+    "title": "Recruitment",
+    "source": "UPSC Recruitment Advertisements",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.upsc.gov.in/whats-new/",
+    "source_page": "https://upsc.gov.in/whats-new",
+    "detected_at": "2026-11-21T16:35:15.422143+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "d439554c3a3612e1",
+    "title": "Recruitment cases kept on hold on account of Pending Litigations",
+    "source": "UPSC Recruitment Advertisements",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.upsc.gov.in/status-of-lateral-recruitment-cases-advertisement-wise/recruitment-cases-kept-on-hold-on-account-of-pending-litigations/",
+    "source_page": "https://upsc.gov.in/whats-new",
+    "detected_at": "2026-11-21T16:35:15.422238+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "0a28848b3e78cdc7",
+    "title": "Recruitment cases kept on hold on account of Pending Litigations",
+    "source": "UPSC Recruitment Advertisements",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.upsc.gov.in/status-of-recruitment-cases-advertisement-wise/recruitment-cases-kept-on-hold-on-account-of-pending-litigations/",
+    "source_page": "https://upsc.gov.in/whats-new",
+    "detected_at": "2026-11-21T16:35:15.422297+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "acdb89a6abc3663e",
+    "title": "Recruitment Representation on Question Papers",
+    "source": "UPSC Recruitment Advertisements",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.upsc.gov.in/recruitment-representation-on-question-papers/",
+    "source_page": "https://upsc.gov.in/whats-new",
+    "detected_at": "2026-11-21T16:35:15.422428+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "978e4fef77681485",
+    "title": "Schedule for Recruitment Tests and Interviews",
+    "source": "UPSC Recruitment Advertisements",
+    "region": "All India",
+    "category": "Government",
+    "official_url": "https://www.upsc.gov.in/recruitment-tests/schedule-for-recruitment-tests-and-interviews/",
+    "source_page": "https://upsc.gov.in/whats-new",
+    "detected_at": "2026-11-21T16:35:15.422326+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "021cd6fcf54df777",
+    "title": "पोलिस भरती",
+    "source": "Maharashtra Police recruitment",
+    "region": "Maharashtra",
+    "category": "Government",
+    "official_url": "https://www.mahapolice.gov.in/police-recru.php",
+    "source_page": "https://www.mahapolice.gov.in/police-recruitment",
+    "detected_at": "2026-11-21T16:35:46.349136+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "f3f878e5b49cf5b6",
+    "title": "पोलीस शिपाई भरती २०२२-२३ निकाल",
+    "source": "Maharashtra Police recruitment",
+    "region": "Maharashtra",
+    "category": "Government",
+    "official_url": "https://www.mahapolice.gov.in/police-recruitment/",
+    "source_page": "https://www.mahapolice.gov.in/police-recruitment",
+    "detected_at": "2026-11-21T16:35:46.348217+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "bf844f648ae2f643",
+    "title": "पोलीस शिपाई भरती २०२४-२५, माहिती",
+    "source": "Maharashtra Police recruitment",
+    "region": "Maharashtra",
+    "category": "Government",
+    "official_url": "https://www.mahapolice.gov.in/police-recru.php/",
+    "source_page": "https://www.mahapolice.gov.in/police-recruitment",
+    "detected_at": "2026-11-21T16:35:46.348029+00:00",
+    "status": "pending_review"
+  },
+  {
+    "id": "16d93483d53e39a8",
+    "title": "प्रतिनियुक्ती",
+    "source": "Maharashtra Police recruitment",
+    "region": "Maharashtra",
+    "category": "Government",
+    "official_url": "https://www.mahapolice.gov.in/deputations/",
+    "source_page": "https://www.mahapolice.gov.in/police-recruitment",
+    "detected_at": "2026-11-21T16:35:46.349169+00:00",
+    "status": "pending_review"
+  }
+]
