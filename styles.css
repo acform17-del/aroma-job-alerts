@@ -2,3 +2,6 @@
 
 /* WhatsApp sharing controls on each verified job card */
 .job-share-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.job-share-actions a{display:inline-flex;align-items:center;justify-content:center;padding:9px 12px;border-radius:8px;color:#fff;text-decoration:none;font-size:13px;font-weight:800}.job-share-actions .share-channel{background:#087f50}.job-share-actions .share-group{background:#0756b8}.job-share-actions a:hover{filter:brightness(1.08)}@media(max-width:700px){.job-share-actions{display:grid;grid-template-columns:1fr 1fr}.job-share-actions a{font-size:12px;padding:9px 6px}}
+
+/* Display both job languages together: English first, Hindi immediately below. */
+.bilingual-en{font-weight:700}.bilingual-hi{margin-top:3px;font-weight:600;color:#243b68;font-family:Arial,"Noto Sans Devanagari",sans-serif}.job-card h3 .bilingual-hi{font-size:.94em}.job-details{margin-top:8px;line-height:1.5}.job-details .bilingual-hi{padding-top:5px;border-top:1px dashed #c6d8f0}

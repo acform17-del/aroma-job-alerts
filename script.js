@@ -1,105 +1,11 @@
-/*
-  JOB ALERTS SITE SETTINGS
-  1. Replace the WhatsApp placeholder with your country code + number,
-     digits only. Example format: 91XXXXXXXXXX (do not include + or spaces).
-  2. Add only verified job notices to the JOBS array below.
-*/
-const SITE_SETTINGS = {
-  whatsappNumber: "917020008745", // India country code + business WhatsApp number
-  whatsappMessage: "Hello, I have an enquiry about Job Alerts."
-};
-
-// Add verified job records here. Keep this empty until you have real notices.
-// Example structure:
-// { title: "Exact vacancy title", organisation: "Organisation name",
-//   category: "Government", deadline: "DD Month YYYY", officialUrl: "https://official-site.example" }
-let JOBS = [];
-
-const jobList = document.getElementById("jobList");
-const searchInput = document.getElementById("jobSearch");
-const categoryFilter = document.getElementById("categoryFilter");
-
-function renderJobs() {
-  const query = searchInput.value.trim().toLowerCase();
-  const category = categoryFilter.value;
-  const filtered = JOBS.filter(job => {
-    const matchesText = [job.title, job.organisation, job.category].join(" ").toLowerCase().includes(query);
-    const matchesCategory = category === "All" || job.category === category;
-    return matchesText && matchesCategory;
-  });
-
-  if (!filtered.length) {
-    jobList.innerHTML = '<div class="empty-state"><strong>No job updates published yet</strong><span>New verified opportunities will appear here when the site administrator adds them.</span></div>';
-    return;
-  }
-
-  jobList.innerHTML = filtered.map(job => `
-    <article class="job-card">
-      <div>
-        <h3>${escapeHTML(job.title)}</h3>
-        <p>${escapeHTML(job.organisation || "")}${job.deadline ? " · Deadline: " + escapeHTML(job.deadline) : ""}</p>
-        ${job.officialUrl ? `<p><a class="text-link" href="${safeURL(job.officialUrl)}" target="_blank" rel="noopener">Official notification ↗</a></p>` : ""}
-      </div>
-      <span class="job-tag">${escapeHTML(job.category)}</span>
-    </article>`).join("");
-}
-
-function escapeHTML(value) {
-  return String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
-}
-function safeURL(value) {
-  try {
-    const url = new URL(value);
-    return ["https:", "http:"].includes(url.protocol) ? url.href : "#";
-  } catch { return "#"; }
-}
-searchInput.addEventListener("input", renderJobs);
-categoryFilter.addEventListener("change", renderJobs);
-document.querySelectorAll("[data-filter]").forEach(link => link.addEventListener("click", () => {
-  categoryFilter.value = link.dataset.filter;
-  renderJobs();
-}));
-
-const whatsappLink = document.getElementById("whatsappLink");
-whatsappLink.addEventListener("click", event => {
-  if (!/^\d{8,15}$/.test(SITE_SETTINGS.whatsappNumber)) {
-    event.preventDefault();
-    alert("The website owner needs to add the official WhatsApp number in script.js before this button can be used.");
-    return;
-  }
-  whatsappLink.href = `https://wa.me/${SITE_SETTINGS.whatsappNumber}?text=${encodeURIComponent(SITE_SETTINGS.whatsappMessage)}`;
-});
-
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-menuToggle.addEventListener("click", () => {
-  const open = mainNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-});
-mainNav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-  mainNav.classList.remove("open");
-  menuToggle.setAttribute("aria-expanded", "false");
-}));
-
-let activeTab = "register";
-document.querySelectorAll("[data-tab]").forEach(button => button.addEventListener("click", () => {
-  activeTab = button.dataset.tab;
-  document.querySelectorAll("[data-tab]").forEach(tab => tab.classList.toggle("active", tab === button));
-  document.getElementById("accountName").closest("label").style.display = activeTab === "register" ? "grid" : "none";
-  const submit = document.getElementById("accountSubmit");
-  submit.textContent = activeTab === "register" ? "Register" : "Login";
-  document.getElementById("accountMessage").textContent = "Demo form only — connect a secure authentication service before accepting real accounts.";
-}));
-document.getElementById("accountForm").addEventListener("submit", event => {
-  event.preventDefault();
-  document.getElementById("accountMessage").textContent =
-    activeTab === "register"
-      ? "This is a visual demo. No account has been created. Add a secure backend before launch."
-      : "This is a visual demo. Login is not connected yet.";
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-fetch("data/published.json")
-  .then(response => response.ok ? response.json() : [])
-  .then(data => { JOBS = Array.isArray(data) ? data : []; renderJobs(); })
-  .catch(() => { JOBS = []; renderJobs(); });
+const whatsappNumber="917020008745";
+const slides=[...document.querySelectorAll('.slide')], dots=[...document.querySelectorAll('.dot')];let slideIndex=0;
+function showSlide(i){slideIndex=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('active',n===slideIndex));dots.forEach((d,n)=>d.classList.toggle('active',n===slideIndex));}
+dots.forEach((d,i)=>d.addEventListener('click',()=>showSlide(i)));document.querySelector('.prev').addEventListener('click',()=>showSlide(slideIndex-1));document.querySelector('.next').addEventListener('click',()=>showSlide(slideIndex+1));setInterval(()=>showSlide(slideIndex+1),4000);
+const menu=document.getElementById('menuToggle'),nav=document.querySelector('.topnav');menu.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+let JOBS=[];const list=document.getElementById('jobList'),search=document.getElementById('jobSearch'),filter=document.getElementById('categoryFilter');
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function bilingual(en,hi){return `<div class="bilingual-en">${esc(en||'')}</div>${hi?`<div class="bilingual-hi" lang="hi" dir="auto">${esc(hi)}</div>`:''}`;}
+function renderJobs(){const q=search.value.trim().toLowerCase(),cat=filter.value;const rows=JOBS.filter(j=>[j.title_en,j.title_hi,j.organisation_en,j.organisation_hi,j.category].join(' ').toLowerCase().includes(q)&&(cat==='All'||j.category===cat));list.innerHTML=rows.length?rows.map(j=>`<article class="job-card"><h3>${bilingual(j.title_en,j.title_hi)}</h3><p>${bilingual(j.organisation_en,j.organisation_hi)}</p>${j.deadline?`<p><b>Last date:</b> ${esc(j.deadline)}</p>`:''}${j.details_en||j.details_hi?`<div class="job-details">${bilingual(j.details_en,j.details_hi)}</div>`:''}${j.officialUrl?`<a href="${esc(j.officialUrl)}" target="_blank" rel="noopener">Official notice ↗ / आधिकारिक सूचना ↗</a>`:''}</article>`).join(''):'<div class="empty-state"><b>No verified job updates published yet.</b><p>अभी कोई सत्यापित नौकरी अपडेट प्रकाशित नहीं हुआ है।</p><p>New notices will appear here after administrator verification.</p></div>'; }
+search.addEventListener('input',renderJobs);filter.addEventListener('change',renderJobs);document.querySelectorAll('[data-filter]').forEach(a=>a.addEventListener('click',()=>{filter.value=a.dataset.filter;renderJobs();}));
+fetch('data/published.json').then(r=>r.ok?r.json():[]).then(d=>{JOBS=Array.isArray(d)?d:[];renderJobs();}).catch(()=>{JOBS=[];renderJobs();});

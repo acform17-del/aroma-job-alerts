@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#061b50"><title>AROMA JOB ALERTS | Admin</title><link rel="stylesheet" href="styles.css"><style>
+.admin-wrap{max-width:980px;margin:40px auto;padding:24px}.admin-box{background:#fff;border:1px solid #dbe3f3;border-radius:16px;padding:24px;box-shadow:0 8px 28px #061b5012}.admin-box h1{color:#061b50}.admin-form{display:flex;gap:10px;flex-wrap:wrap}.admin-form input{padding:13px;border:1px solid #bbc8df;border-radius:8px;min-width:240px;flex:1}.admin-btn{background:#ffcf16;color:#071b4b;border:0;border-radius:8px;padding:12px 18px;font-weight:800;cursor:pointer}.admin-muted{color:#53627c}.admin-job{border:1px solid #dbe3f3;border-radius:12px;padding:16px;margin:14px 0}.admin-job h3{margin:0 0 8px;color:#061b50}.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.admin-actions a{display:inline-block;text-decoration:none;border-radius:8px;padding:10px 13px;color:#fff;background:#168c54;font-weight:700}.admin-actions a.group{background:#1769bd}.admin-error{color:#b42318;margin-top:12px}.admin-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.admin-hidden{display:none!important}
+</style></head><body><main class="admin-wrap"><section class="admin-box"><div class="admin-top"><div><p class="admin-muted">PRIVATE OWNER AREA</p><h1>AROMA JOB ALERTS — Admin</h1></div><a href="index.html">← Public website</a></div>
+<div id="loginArea"><p>Sign in to access private WhatsApp sharing tools.</p><form id="loginForm" class="admin-form"><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Admin password" required><button class="admin-btn" type="submit">Admin Login</button></form><p id="loginError" class="admin-error" role="alert"></p></div>
+<div id="panel" class="admin-hidden"><div class="admin-top"><p class="admin-muted">Only the signed-in administrator can see these sharing controls.</p><button id="logout" class="admin-btn" type="button">Log out</button></div><h2>Job Posting & Approval (English + Hindi)</h2>
+<p class="admin-muted">Enter both languages before approving a job. This creates a downloadable published.json file for you to commit to GitHub.</p>
+<form id="bilingualJobForm" class="admin-form" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<label>Job title (English)<input id="titleEn" required placeholder="e.g. Police Constable Recruitment"></label>
+<label>जॉब शीर्षक (हिंदी)<input id="titleHi" required placeholder="उदा. पुलिस कांस्टेबल भर्ती"></label>
+<label>Organisation (English)<input id="orgEn" placeholder="Recruiting department"></label>
+<label>संस्था / विभाग (हिंदी)<input id="orgHi" placeholder="भर्ती विभाग"></label>
+<label>Category<select id="jobCategory"><option>Government</option><option>Private</option><option>Exams</option><option>Admissions</option><option>Results</option><option>Admit Cards</option></select></label>
+<label>Last date / अंतिम तिथि<input id="jobDeadline" placeholder="DD-MM-YYYY"></label>
+<label>Official notice URL<input id="jobUrl" type="url" required placeholder="https://official.gov.in/notice"></label>
+<label>Short details (English)<textarea id="detailsEn" rows="3" placeholder="Eligibility, posts, application details"></textarea></label>
+<label>संक्षिप्त विवरण (हिंदी)<textarea id="detailsHi" rows="3" placeholder="पात्रता, पद और आवेदन विवरण"></textarea></label>
+<div style="grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap"><button class="admin-btn" type="submit">Approve & Add Job</button><button class="admin-btn" id="downloadPublished" type="button">Download approved jobs JSON</button></div>
+</form><p id="bilingualMessage" class="admin-muted" role="status"></p>
+<h2>Share latest published jobs</h2><p class="admin-muted">Choose a button to open WhatsApp's share composer. Select your own Channel or Group inside WhatsApp and confirm the post. The website cannot publish without your confirmation.</p><div id="adminJobs"></div></div>
+</section></main><script src="admin.js"></script></body></html>
